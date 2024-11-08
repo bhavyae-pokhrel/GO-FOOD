@@ -8,7 +8,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.geolocation }))
-    const response = await fetch("https://go-food-29l2.onrender.com/api/creatuser", {
+    const response = await fetch("https://gofoodbackend-mqax.onrender.com/api/creatuser", {
     //const response = await fetch("https://gofoodapi-i32n.onrender.com/api/creatuser", { 
       method: "POST",
       headers: {

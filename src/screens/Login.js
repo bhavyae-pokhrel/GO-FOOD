@@ -6,7 +6,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log( JSON.stringify({ email: credentials.email, password: credentials.password }))
-    const response = await fetch("https://go-food-29l2.onrender.com/api/loginuser", {
+    const response = await fetch("https://gofoodbackend-mqax.onrender.com/api/loginuser", {
     //const response = await fetch("https://gofoodapi-i32n.onrender.com/api/loginuser", {
       method: "POST",
       headers: {
