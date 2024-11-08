@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port =5000
+const cors=require('cors');
 //  db.js will connected and all element of food_items will return in terminal
 const mongoDB =require("./db")
 mongoDB();
@@ -23,7 +24,7 @@ app.use('/api', require("./Routes/CreatUser"));
 app.use('/api', require("./Routes/DisplayData"));
 app.use('/api', require("./Routes/OrderData"));
 
-const cors=require('cors');
+
 
 
 app.get('/', (req, res ) => {
