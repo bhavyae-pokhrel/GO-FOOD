@@ -13,16 +13,18 @@ app.use((req,res,next)=>{
     next();
 })
 
+app.use(cors({
+  origin:"*",
+  credentials:true,
+}));
+
 app.use(express.json ())
 app.use('/api', require("./Routes/CreatUser"));
 app.use('/api', require("./Routes/DisplayData"));
 app.use('/api', require("./Routes/OrderData"));
 
 const cors=require('cors');
-app.use(cors({
-  origin:"*",
-  credentials:true,
-}));
+
 
 app.get('/', (req, res ) => {
   res.send('Hello World -->')
